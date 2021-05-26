@@ -34,7 +34,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint .",
-    "check-types": "tsc"
+    "check-types": "tsc",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.{js,jsx,ts,tsx,json}\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "npm run prettier -- --check"
   },
   "eslintConfig": {
     "extends": [
@@ -57,6 +60,7 @@
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
-    "husky": "^6.0.0"
+    "husky": "^6.0.0",
+    "prettier": "^2.3.0"
   }
 }
